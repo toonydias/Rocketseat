@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Módulo 1 - Skylab RockSeat</title>
+</head>
+<body></body>
+    <script>
+        var paragrafo = document.createElement('p')
+
+        // 1º Exercício
+        var endereco = {
+        rua: "Rua dos pinheiros",
+        numero: 1293,
+        bairro: "Centro",
+        cidade: "São Paulo",
+        uf: "SP"
+        };
+        function user() {
+            document.body.appendChild(paragrafo)
+            paragrafo.innerText = `O usuário ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na "${endereco.rua}" com nº${endereco.numero}`
+        }
+        user()
+
+        // 2º Exercício
+        function pares(x,y){
+            for(x = x;x <= y;x++){
+                if(x % 2 == 0){
+                    paragrafo = document.createElement('p')
+                    document.body.appendChild(paragrafo)
+                    paragrafo.innerText = x
+                }
+            }
+        }
+        pares(33,45)
+
+        // 3º Exercício
+        function temHabilidade(skill) {
+            if(skills.indexOf(skill) >-1){
+                this.paragrafo = document.createElement('p')
+                document.body.appendChild(paragrafo)
+                paragrafo.innerHTML = 'true'
+            } else {
+                this.paragrafo = document.createElement('p')
+                document.body.appendChild(paragrafo)
+                paragrafo.innerHTML = 'false'
+            }
+        }
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        temHabilidade('Javascript'); // true ou false
+
+        // 4º Exercício
+        function experiencia(anos) {
+            var estudo 
+            if (anos <= 1) {
+                estudo = 'Iniciante'
+            } else if (anos >= 1 && anos <= 3) {
+                estudo = 'Intermediário'
+            } else if (anos >= 3 && anos <= 6) {
+                estudo = 'Avançado'
+            } else {
+                estudo = 'Jedi Master'
+            }
+            paragrafo = document.createElement('p')
+            document.body.appendChild(paragrafo)
+            paragrafo.innerHTML = estudo
+        }
+        var anosEstudo = 4;
+        experiencia(anosEstudo);
+        // De 0-1 ano: Iniciante
+        // De 1-3 anos: Intermediário
+        // De 3-6 anos: Avançado
+        // De 7 acima: Jedi Master
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+        userNskills()
+        function userNskills(){
+            for(i = 0; i < usuarios.length; i++){
+                paragrafo = document.createElement('p')
+                document.body.appendChild(paragrafo)
+                paragrafo.innerHTML = `O ${usuarios[i].nome} possui as habilidades: ${usuarios[i].habilidades.join(', ')}`
+            }  
+        }
+
+    </script>
+
+</body>
+</html>
